@@ -1,0 +1,22 @@
+package com.example.portfolio.entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@Table(name="person")
+public class PersonEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+    private String name;
+    private String about_me;
+    private String country;
+    private String image;
+
+}
