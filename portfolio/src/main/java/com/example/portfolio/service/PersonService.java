@@ -8,5 +8,5 @@ public interface PersonService {
 
     PersonDTO savePerson(PersonDTO dto);
 
-
+    List<PersonDTO> getAllPerson();
 }

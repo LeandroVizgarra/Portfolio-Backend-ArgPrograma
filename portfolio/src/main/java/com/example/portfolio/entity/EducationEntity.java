@@ -3,10 +3,7 @@ package com.example.portfolio.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -20,4 +17,8 @@ public class EducationEntity {
     private String place_logo;
     private Long current_year;
     private String education_type;
+
+    @ManyToOne
+    @JoinColumn(name = "personId")
+    private PersonEntity person;
 }

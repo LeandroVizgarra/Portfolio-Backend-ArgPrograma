@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -23,4 +20,8 @@ public class ProyectsEntity {
     private String proyect_img;
     @DateTimeFormat(pattern = "dd/mm/yyyy")
     private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name="personId")
+    private PersonEntity person;
 }

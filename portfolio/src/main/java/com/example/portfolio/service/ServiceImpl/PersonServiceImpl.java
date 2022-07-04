@@ -28,4 +28,10 @@ public class PersonServiceImpl implements PersonService {
         return result;
     }
 
+    public List<PersonDTO> getAllPerson(){
+        List<PersonEntity> entities = this.personRepository.findAll();
+        List<PersonDTO> result = this.personMapper.personEntityList2DTOList(entities);
+        return result;
+    }
+
 }
