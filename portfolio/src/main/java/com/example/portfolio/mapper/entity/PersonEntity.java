@@ -1,4 +1,4 @@
-package com.example.portfolio.entity;
+package com.example.portfolio.mapper.entity;
 
 import lombok.Getter;
 import lombok.Setter;

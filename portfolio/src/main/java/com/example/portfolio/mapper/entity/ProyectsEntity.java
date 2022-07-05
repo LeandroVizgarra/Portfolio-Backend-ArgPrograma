@@ -1,4 +1,4 @@
-package com.example.portfolio.entity;
+package com.example.portfolio.mapper.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +10,7 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
+@Table(name="proyects")
 public class ProyectsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

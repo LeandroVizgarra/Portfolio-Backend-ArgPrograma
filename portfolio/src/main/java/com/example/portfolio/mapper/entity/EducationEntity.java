@@ -1,4 +1,4 @@
-package com.example.portfolio.entity;
+package com.example.portfolio.mapper.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name="education")
 public class EducationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

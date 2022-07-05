@@ -1,4 +1,4 @@
-package com.example.portfolio.entity;
+package com.example.portfolio.mapper.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,14 +8,20 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class HardAndSoftSkillsEntity {
+@Table(name="experience")
+public class ExperienceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String name;
-    private Long progress;
+    private String job_name;
+    private String job_tittle;
+    private String image;
+    private String tasks;
 
     @ManyToOne
     @JoinColumn(name="personId")
     private PersonEntity person;
+
 }
+
+

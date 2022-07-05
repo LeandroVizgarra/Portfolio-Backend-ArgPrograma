@@ -1,7 +1,7 @@
 package com.example.portfolio.service.ServiceImpl;
 
 import com.example.portfolio.dto.ProyectsDTO;
-import com.example.portfolio.entity.ProyectsEntity;
+import com.example.portfolio.mapper.entity.ProyectsEntity;
 import com.example.portfolio.mapper.ProyectsMapper;
 import com.example.portfolio.repository.ProyectsRepository;
 import com.example.portfolio.service.ProyectsService;
@@ -32,6 +32,10 @@ public class ProyectsServiceImpl implements ProyectsService {
         ProyectsEntity personSave = proyectsRepository.save(entity);
         ProyectsDTO result = proyectsMapper.proyectsEntity2DTO(personSave);
         return result;
+    }
+
+    public void deleteProyect(Long id){
+        proyectsRepository.deleteById(id);
     }
 
 }

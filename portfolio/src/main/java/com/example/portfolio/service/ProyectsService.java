@@ -9,4 +9,6 @@ public interface ProyectsService {
     List<ProyectsDTO> getAllProyects();
 
     ProyectsDTO saveProyects(ProyectsDTO dto);
+
+    void deleteProyect(Long id);
 }
