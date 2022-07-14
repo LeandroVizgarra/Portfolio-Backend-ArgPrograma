@@ -1,7 +1,7 @@
 package com.example.portfolio.service.ServiceImpl;
 
 import com.example.portfolio.dto.ExperienceDTO;
-import com.example.portfolio.mapper.entity.ExperienceEntity;
+import com.example.portfolio.entity.ExperienceEntity;
 import com.example.portfolio.mapper.ExperienceMapper;
 import com.example.portfolio.repository.ExperienceRepository;
 import com.example.portfolio.service.ExperienceService;

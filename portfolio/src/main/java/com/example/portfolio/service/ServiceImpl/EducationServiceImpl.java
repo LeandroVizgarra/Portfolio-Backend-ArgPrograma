@@ -1,10 +1,8 @@
 package com.example.portfolio.service.ServiceImpl;
 
 import com.example.portfolio.dto.EducationDTO;
-import com.example.portfolio.dto.ExperienceDTO;
 import com.example.portfolio.mapper.EducationMapper;
-import com.example.portfolio.mapper.entity.EducationEntity;
-import com.example.portfolio.mapper.entity.ExperienceEntity;
+import com.example.portfolio.entity.EducationEntity;
 import com.example.portfolio.repository.EducationRepository;
 import com.example.portfolio.service.EducationService;
 import org.springframework.beans.factory.annotation.Autowired;

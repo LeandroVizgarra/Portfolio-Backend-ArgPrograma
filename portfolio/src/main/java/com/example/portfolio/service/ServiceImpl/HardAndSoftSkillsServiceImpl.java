@@ -1,7 +1,7 @@
 package com.example.portfolio.service.ServiceImpl;
 
 import com.example.portfolio.dto.HardAndSoftSkillsDTO;
-import com.example.portfolio.mapper.entity.HardAndSoftSkillsEntity;
+import com.example.portfolio.entity.HardAndSoftSkillsEntity;
 import com.example.portfolio.mapper.HardAndSoftSkillsMapper;
 import com.example.portfolio.repository.HardAndSoftSkillsRepository;
 import com.example.portfolio.service.HardAndSoftSkillsService;

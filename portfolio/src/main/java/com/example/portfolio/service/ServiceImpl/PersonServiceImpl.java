@@ -1,7 +1,7 @@
 package com.example.portfolio.service.ServiceImpl;
 
 import com.example.portfolio.dto.PersonDTO;
-import com.example.portfolio.mapper.entity.PersonEntity;
+import com.example.portfolio.entity.PersonEntity;
 import com.example.portfolio.mapper.PersonMapper;
 import com.example.portfolio.repository.PersonRepository;
 import com.example.portfolio.service.PersonService;
@@ -33,5 +33,6 @@ public class PersonServiceImpl implements PersonService {
         List<PersonDTO> result = this.personMapper.personEntityList2DTOList(entities);
         return result;
     }
+
 
 }

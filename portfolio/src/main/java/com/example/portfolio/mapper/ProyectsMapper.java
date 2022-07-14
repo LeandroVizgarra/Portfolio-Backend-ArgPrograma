@@ -1,7 +1,7 @@
 package com.example.portfolio.mapper;
 
 import com.example.portfolio.dto.ProyectsDTO;
-import com.example.portfolio.mapper.entity.ProyectsEntity;
+import com.example.portfolio.entity.ProyectsEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
