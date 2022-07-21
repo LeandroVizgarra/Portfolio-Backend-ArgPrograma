@@ -34,6 +34,14 @@ public class HardAndSoftSkillsServiceImpl implements HardAndSoftSkillsService {
         return result;
     }
 
+    public HardAndSoftSkillsDTO updateHass(HardAndSoftSkillsDTO dto){
+        HardAndSoftSkillsEntity entity = hardAndSoftSkillsMapper.hardAndSoftSkillsDTO2Entity(dto);
+        HardAndSoftSkillsEntity hassUpdated = hardAndSoftSkillsRepository.save(entity);
+        HardAndSoftSkillsDTO result = hardAndSoftSkillsMapper.hardAndSoftSkillsEntity2DTO(hassUpdated);
+        return result;
+
+    }
+
     public void deleteHass(Long id){
         hardAndSoftSkillsRepository.deleteById(id);
     }

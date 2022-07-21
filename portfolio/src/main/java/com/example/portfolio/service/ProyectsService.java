@@ -10,5 +10,6 @@ public interface ProyectsService {
 
     ProyectsDTO saveProyects(ProyectsDTO dto);
 
+    ProyectsDTO updateProyects(ProyectsDTO dto);
     void deleteProyect(Long id);
 }

@@ -29,6 +29,12 @@ public class HardAndSoftSkillsController {
         return ResponseEntity.status(HttpStatus.CREATED).body(hassSaved);
     }
 
+    @PutMapping
+    public ResponseEntity<HardAndSoftSkillsDTO> update(@RequestBody HardAndSoftSkillsDTO dto){
+        HardAndSoftSkillsDTO hassUpdated = hardAndSoftSkillsService.updateHass(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(hassUpdated  );
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
         this.hardAndSoftSkillsService.deleteHass(id);

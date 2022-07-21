@@ -31,6 +31,12 @@ public class EducationServiceImpl implements EducationService {
         EducationDTO result  = educationMapper.educationEntity2DTO(educationSave);
         return result;
     }
+    public EducationDTO updateEducation(EducationDTO dto){
+        EducationEntity education = educationMapper.educationDTO2Entity(dto);
+        EducationEntity educationUpdated = educationRepository.save(education);
+        EducationDTO result  = educationMapper.educationEntity2DTO(educationUpdated);
+        return result;
+    }
 
     public void deleteEducation(Long id){
         educationRepository.deleteById(id);

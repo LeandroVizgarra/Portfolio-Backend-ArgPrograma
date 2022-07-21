@@ -32,6 +32,15 @@ public class EducationController {
 
     }
 
+    @PutMapping
+    public ResponseEntity<EducationDTO> updateEducation(EducationDTO dto){
+
+        EducationDTO educationUpdate = educationService.updateEducation(dto);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(educationUpdate);
+
+    }
+
     @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteEducation(@RequestParam Long id){
         educationService.deleteEducation(id);

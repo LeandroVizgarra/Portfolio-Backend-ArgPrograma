@@ -11,6 +11,7 @@ public interface HardAndSoftSkillsService {
 
     HardAndSoftSkillsDTO saveHass(HardAndSoftSkillsDTO dto);
 
+    HardAndSoftSkillsDTO updateHass(HardAndSoftSkillsDTO dto);
     void deleteHass(Long id);
 
 }

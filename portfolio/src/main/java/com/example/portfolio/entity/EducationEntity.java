@@ -18,6 +18,7 @@ public class EducationEntity {
     private String place_logo;
     private Long current_year;
     private String education_type;
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "personId")

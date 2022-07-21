@@ -10,5 +10,6 @@ public interface ExperienceService {
 
     ExperienceDTO saveExperience(ExperienceDTO dto);
 
+    ExperienceDTO updateExperience(ExperienceDTO dto);
     void deleteExperience(Long id);
 }

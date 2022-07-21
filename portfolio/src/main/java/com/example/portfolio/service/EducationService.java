@@ -8,6 +8,8 @@ public interface EducationService {
 
     EducationDTO saveEducation(EducationDTO dto);
 
+    EducationDTO updateEducation(EducationDTO dto);
+
     void deleteEducation(Long id);
 
     List<EducationDTO> getAllEducation();

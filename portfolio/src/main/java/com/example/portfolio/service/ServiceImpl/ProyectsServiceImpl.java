@@ -34,6 +34,13 @@ public class ProyectsServiceImpl implements ProyectsService {
         return result;
     }
 
+    public ProyectsDTO updateProyects(ProyectsDTO dto){
+        ProyectsEntity entity = proyectsMapper.proyectsDTO2Entity(dto);
+        ProyectsEntity proyectUpdated = proyectsRepository.save(entity);
+        ProyectsDTO result = proyectsMapper.proyectsEntity2DTO(proyectUpdated);
+        return result;
+    }
+
     public void deleteProyect(Long id){
         proyectsRepository.deleteById(id);
     }

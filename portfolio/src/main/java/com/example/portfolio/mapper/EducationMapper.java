@@ -20,6 +20,7 @@ public class EducationMapper {
         educationEntity.setName(dto.getName());
         educationEntity.setPlace_logo(dto.getPlace_logo());
         educationEntity.setPlace_name(dto.getPlace_name());
+        educationEntity.setStatus(dto.getStatus());
         return educationEntity;
     }
 
@@ -32,6 +33,7 @@ public class EducationMapper {
         educationDTO.setName(entity.getName());
         educationDTO.setPlace_logo(entity.getPlace_logo());
         educationDTO.setPlace_name(entity.getPlace_name());
+        educationDTO.setStatus(entity.getStatus());
         return educationDTO;
     }
 

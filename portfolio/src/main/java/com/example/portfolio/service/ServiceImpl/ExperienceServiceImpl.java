@@ -34,6 +34,13 @@ public class ExperienceServiceImpl implements ExperienceService {
         return result;
     }
 
+    public ExperienceDTO updateExperience(ExperienceDTO dto){
+        ExperienceEntity experience = experienceMapper.experienceDTO2Entity(dto);
+        ExperienceEntity experienceUpdated = experienceRepository.save(experience);
+        ExperienceDTO result  = experienceMapper.experienceEntity2DTO(experienceUpdated);
+        return result;
+    }
+
     public void deleteExperience(Long id){
         experienceRepository.deleteById(id);
     }

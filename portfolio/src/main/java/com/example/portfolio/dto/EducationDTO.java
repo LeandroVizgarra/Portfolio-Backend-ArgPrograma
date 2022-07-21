@@ -12,4 +12,6 @@ public class EducationDTO {
     private String place_logo;
     private Long current_year;
     private String education_type;
+
+    private String status;
 }
