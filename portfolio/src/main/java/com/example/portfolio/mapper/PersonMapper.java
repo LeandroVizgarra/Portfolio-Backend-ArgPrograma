@@ -2,6 +2,8 @@ package com.example.portfolio.mapper;
 
 import com.example.portfolio.dto.PersonDTO;
 import com.example.portfolio.entity.PersonEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,6 +11,22 @@ import java.util.List;
 
 @Component
 public class PersonMapper {
+
+    @Lazy
+    private final EducationMapper educationMapper;
+    @Lazy
+    private final ExperienceMapper experienceMapper;
+    @Lazy
+    private final HardAndSoftSkillsMapper hardAndSoftSkillsMapper;
+    @Lazy
+    private final ProyectsMapper proyectsMapper;
+    @Autowired
+    public PersonMapper(EducationMapper educationMapper, ExperienceMapper experienceMapper, HardAndSoftSkillsMapper hardAndSoftSkillsMapper, ProyectsMapper proyectsMapper) {
+        this.educationMapper = educationMapper;
+        this.experienceMapper = experienceMapper;
+        this.hardAndSoftSkillsMapper = hardAndSoftSkillsMapper;
+        this.proyectsMapper = proyectsMapper;
+    }
 
     public PersonEntity personDTO2Entity(PersonDTO dto){
         PersonEntity personEntity = new PersonEntity();
@@ -27,6 +45,15 @@ public class PersonMapper {
         personDTO.setId(entity.getPersonId());
         personDTO.setImage(entity.getImage());
         personDTO.setName(entity.getName());
+        personDTO.setEducation(this.educationMapper.educationEntityList2DTOList(
+                entity.getEducationEntities()));
+        personDTO.setExperience(this.experienceMapper.experienceEntityList2DTOList(
+                entity.getExperiences()));
+        personDTO.setSkills(this.hardAndSoftSkillsMapper.hardAndSoftSkillsEntityList2DTOList(
+                entity.getSkills()));
+        personDTO.setProyects(this.proyectsMapper.proyectsEntityList2DTOList(
+                entity.getProyects()
+        ));
         return personDTO;
     }
 

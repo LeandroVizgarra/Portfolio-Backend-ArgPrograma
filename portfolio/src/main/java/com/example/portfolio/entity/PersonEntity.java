@@ -19,4 +19,17 @@ public class PersonEntity {
     private String about_me;
     private String country;
     private String image;
+    @OneToMany
+    private List<EducationEntity> educationEntities;
+    @OneToMany
+    private List<ExperienceEntity> experiences;
+    @OneToMany
+    private List<HardAndSoftSkillsEntity> skills;
+    @OneToMany
+    private List<ProyectsEntity> proyects;
+
+    //TODO Enalzar tablas
+    //TODO probar endpoints
+    //TODO pasar por IA correcciones
+    //TODO Rehacer la BBDD
 }
