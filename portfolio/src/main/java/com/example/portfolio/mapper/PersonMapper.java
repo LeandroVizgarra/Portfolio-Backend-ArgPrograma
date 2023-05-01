@@ -30,7 +30,7 @@ public class PersonMapper {
 
     public PersonEntity personDTO2Entity(PersonDTO dto){
         PersonEntity personEntity = new PersonEntity();
-        personEntity.setAbout_me(dto.getAbout_me());
+        personEntity.setAbout_me(dto.getAboutMe());
         personEntity.setCountry(dto.getCountry());
         personEntity.setPersonId(dto.getId());
         personEntity.setImage(dto.getImage());
@@ -40,7 +40,7 @@ public class PersonMapper {
 
     public PersonDTO personEntity2DTO(PersonEntity entity){
         PersonDTO personDTO = new PersonDTO();
-        personDTO.setAbout_me(entity.getAbout_me());
+        personDTO.setAboutMe(entity.getAbout_me());
         personDTO.setCountry((entity.getCountry()));
         personDTO.setId(entity.getPersonId());
         personDTO.setImage(entity.getImage());

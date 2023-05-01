@@ -14,20 +14,20 @@ public class ExperienceMapper {
 
         ExperienceEntity experienceEntity = new ExperienceEntity();
         experienceEntity.setId(dto.getId());
-        experienceEntity.setImage(dto.getImage());
-        experienceEntity.setJob_name(dto.getJob_name());
-        experienceEntity.setTasks(dto.getTasks());
-        experienceEntity.setJob_tittle(dto.getJob_tittle());
+        experienceEntity.setImage(dto.getJobLogo());
+        experienceEntity.setJob_name(dto.getCompany());
+        experienceEntity.setTasks(dto.getDescription());
+        experienceEntity.setJob_tittle(dto.getJobTittle());
         return experienceEntity;
     }
 
     public ExperienceDTO experienceEntity2DTO(ExperienceEntity entity){
         ExperienceDTO experienceDTO = new ExperienceDTO();
         experienceDTO.setId(entity.getId());
-        experienceDTO.setImage(entity.getImage());
-        experienceDTO.setJob_name(entity.getJob_name());
-        experienceDTO.setTasks(entity.getTasks());
-        experienceDTO.setJob_tittle(entity.getJob_tittle());
+        experienceDTO.setJobLogo(entity.getImage());
+        experienceDTO.setCompany(entity.getJob_name());
+        experienceDTO.setDescription(entity.getTasks());
+        experienceDTO.setJobTittle(entity.getJob_tittle());
         return experienceDTO;
     }
 

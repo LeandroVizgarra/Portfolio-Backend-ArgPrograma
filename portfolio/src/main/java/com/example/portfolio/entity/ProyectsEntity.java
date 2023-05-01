@@ -17,8 +17,8 @@ public class ProyectsEntity {
     private Long id;
     private String name;
     private String description;
-    private String proyect_url;
-    private String proyect_img;
+    private String proyectUrl;
+    private String proyectImg;
     @DateTimeFormat(pattern = "dd/mm/yyyy")
     private LocalDate date;
 

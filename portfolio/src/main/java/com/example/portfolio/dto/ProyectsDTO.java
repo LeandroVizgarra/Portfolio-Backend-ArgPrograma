@@ -11,7 +11,7 @@ public class ProyectsDTO {
     private Long id;
     private String name;
     private String description;
-    private String proyect_url;
-    private String proyect_img;
+    private String proyectUrl;
+    private String proyectImg;
     private LocalDate date;
 }

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -17,6 +18,7 @@ public class ExperienceEntity {
     private String job_tittle;
     private String image;
     private String tasks;
+    private LocalDate startDate;
 
     @ManyToOne
     @JoinColumn(name="personId")

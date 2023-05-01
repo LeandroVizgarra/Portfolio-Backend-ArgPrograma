@@ -1,9 +1,11 @@
 package com.example.portfolio.entity;
 
+import com.example.portfolio.enums.EducationTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -14,10 +16,11 @@ public class EducationEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
-    private String place_name;
-    private String place_logo;
-    private Long current_year;
-    private String education_type;
+    private String placeName;
+    private String placeLogo;
+    private LocalDate date;
+    @Enumerated(EnumType.STRING)
+    private EducationTypeEnum educationType;
     private String status;
 
     @ManyToOne

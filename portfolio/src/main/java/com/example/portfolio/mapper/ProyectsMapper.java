@@ -12,8 +12,8 @@ public class ProyectsMapper {
 
     public ProyectsEntity proyectsDTO2Entity(ProyectsDTO dto){
         ProyectsEntity proyectsEntity = new ProyectsEntity();
-        proyectsEntity.setProyect_img(dto.getProyect_img());
-        proyectsEntity.setProyect_url(dto.getProyect_url());
+        proyectsEntity.setProyectImg(dto.getProyectImg());
+        proyectsEntity.setProyectUrl(dto.getProyectUrl());
         proyectsEntity.setDate(dto.getDate());
         proyectsEntity.setDescription(dto.getDescription());
         proyectsEntity.setName(dto.getName());
@@ -23,8 +23,8 @@ public class ProyectsMapper {
 
     public ProyectsDTO proyectsEntity2DTO(ProyectsEntity entity){
         ProyectsDTO proyectsDTO = new ProyectsDTO();
-        proyectsDTO.setProyect_img(entity.getProyect_img());
-        proyectsDTO.setProyect_url(entity.getProyect_url());
+        proyectsDTO.setProyectImg(entity.getProyectImg());
+        proyectsDTO.setProyectUrl(entity.getProyectUrl());
         proyectsDTO.setDate(entity.getDate());
         proyectsDTO.setDescription(entity.getDescription());
         proyectsDTO.setId(entity.getId());

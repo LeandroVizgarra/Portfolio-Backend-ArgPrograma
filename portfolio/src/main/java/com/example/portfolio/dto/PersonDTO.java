@@ -10,7 +10,7 @@ import java.util.List;
 public class PersonDTO {
     private Long id;
     private String name;
-    private String about_me;
+    private String aboutMe;
     private String country;
     private String image;
 

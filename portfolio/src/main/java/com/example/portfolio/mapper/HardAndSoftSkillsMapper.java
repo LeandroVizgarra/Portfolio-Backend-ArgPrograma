@@ -17,7 +17,7 @@ public class HardAndSoftSkillsMapper {
 
         hardAndSoftSkillsEntity.setId(dto.getId());
         hardAndSoftSkillsEntity.setName(dto.getName());
-        hardAndSoftSkillsEntity.setProgress(dto.getProgress());
+        hardAndSoftSkillsEntity.setProgress(dto.getLevel());
 
         return hardAndSoftSkillsEntity;
     }
@@ -28,7 +28,7 @@ public class HardAndSoftSkillsMapper {
 
         hardAndSoftSkillsDTO.setId(entity.getId());
         hardAndSoftSkillsDTO.setName(entity.getName());
-        hardAndSoftSkillsDTO.setProgress(entity.getProgress());
+        hardAndSoftSkillsDTO.setLevel(entity.getProgress());
 
         return hardAndSoftSkillsDTO;
     }

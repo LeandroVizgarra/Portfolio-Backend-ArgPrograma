@@ -8,5 +8,5 @@ import lombok.Setter;
 public class HardAndSoftSkillsDTO {
     private Long id;
     private String name;
-    private Long progress;
+    private Long level;
 }

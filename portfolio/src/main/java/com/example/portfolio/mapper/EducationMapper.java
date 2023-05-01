@@ -14,12 +14,12 @@ public class EducationMapper {
 
         EducationEntity educationEntity = new EducationEntity();
 
-        educationEntity.setCurrent_year(dto.getCurrent_year());
-        educationEntity.setEducation_type(dto.getEducation_type());
+        educationEntity.setDate(dto.getDate());
+        educationEntity.setEducationType(dto.getEducation_type());
         educationEntity.setId(dto.getId());
         educationEntity.setName(dto.getName());
-        educationEntity.setPlace_logo(dto.getPlace_logo());
-        educationEntity.setPlace_name(dto.getPlace_name());
+        educationEntity.setPlaceLogo(dto.getLogo());
+        educationEntity.setPlaceName(dto.getPlaceName());
         educationEntity.setStatus(dto.getStatus());
         return educationEntity;
     }
@@ -27,12 +27,12 @@ public class EducationMapper {
     public EducationDTO educationEntity2DTO(EducationEntity entity){
         EducationDTO educationDTO = new EducationDTO();
 
-        educationDTO.setEducation_type(entity.getEducation_type());
-        educationDTO.setCurrent_year(entity.getCurrent_year());
+        educationDTO.setEducation_type(entity.getEducationType());
+        educationDTO.setDate(entity.getDate());
         educationDTO.setId(entity.getId());
         educationDTO.setName(entity.getName());
-        educationDTO.setPlace_logo(entity.getPlace_logo());
-        educationDTO.setPlace_name(entity.getPlace_name());
+        educationDTO.setLogo(entity.getPlaceLogo());
+        educationDTO.setPlaceName(entity.getPlaceName());
         educationDTO.setStatus(entity.getStatus());
         return educationDTO;
     }
